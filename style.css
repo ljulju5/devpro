@@ -24,6 +24,12 @@ ul {
 .customContainer {
   width: 80%;
   margin: 0 auto; }
+  @media only screen and (max-width: 768px) {
+    .customContainer {
+      width: 90%; } }
+  @media only screen and (min-width: 769px) and (max-width: 1366px) {
+    .customContainer {
+      width: 85%; } }
 
 h2 {
   text-align: center;
@@ -31,6 +37,9 @@ h2 {
   color: #76c9b3;
   font-weight: 600;
   text-shadow: 1px 1px 0px #236351; }
+  @media only screen and (max-width: 768px) {
+    h2 {
+      font-size: 2.2rem; } }
 
 h2::after {
   display: block;
@@ -40,6 +49,23 @@ h2::after {
   background: #76c9b3;
   margin: 10px auto 30px auto;
   box-shadow: 1px 1px 0px #236351; }
+  @media only screen and (max-width: 768px) {
+    h2::after {
+      height: 5px; } }
+
+.headers {
+  background-image: linear-gradient(rgba(70, 68, 67, 0.6), rgba(70, 68, 67, 0.6)), url(img/headerServices1.jpg);
+  height: 60vh; }
+
+hr {
+  width: 100%;
+  height: 1px;
+  background: #76c9b3;
+  margin: 60px auto;
+  box-shadow: 1px 1px 0px #236351; }
+  @media only screen and (max-width: 768px) {
+    hr {
+      margin-bottom: 30px; } }
 
 /**********
 nav
@@ -49,19 +75,30 @@ nav .logo {
   align-items: center; }
   nav .logo .navbar-brand img {
     width: 100%; }
+    @media only screen and (max-width: 1024px) {
+      nav .logo .navbar-brand img {
+        width: 80%; } }
   nav .logo h3 {
     font-size: 1.6rem;
     color: #fff;
     font-weight: 600; }
+    @media only screen and (max-width: 1366px) {
+      nav .logo h3 {
+        font-size: 1.2rem; } }
     nav .logo h3 span {
       color: #76c9b3; }
 nav ul a {
   color: #fff !important;
   font-size: 1.2rem;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 0px #236351;
+  font-weight: 600; }
   nav ul a:hover {
     color: #76c9b3 !important;
     transition: 0.4s ease; }
+  @media only screen and (max-width: 1366px) {
+    nav ul a {
+      font-size: 1rem; } }
 
 .navFixed {
   background-color: rgba(255, 255, 255, 0.2); }
@@ -80,7 +117,9 @@ nav ul a {
   .stickyAdd .nav-link {
     color: #333333 !important;
     font-size: 1rem !important;
-    font-weight: 600; }
+    font-weight: 600;
+    text-shadow: none;
+    padding-left: 10px; }
 
 /**********
 header
@@ -95,17 +134,29 @@ header {
   display: flex;
   flex-wrap: wrap;
   color: #fff; }
-  header .headerMain {
+  @media only screen and (max-width: 768px) {
+    header {
+      height: 90vh; } }
+  header .customContainer {
     display: flex;
     align-items: center; }
-    header .headerMain h1 {
+    header .customContainer h1 {
+      font-size: 3rem;
       font-weight: 600; }
+      @media only screen and (max-width: 768px) {
+        header .customContainer h1 {
+          font-size: 1.6rem;
+          padding-top: 110px;
+          text-shadow: 1px 1px 0px #236351; } }
 
 /**********
 services
 **********/
 .services {
   padding: 80px 0; }
+  @media only screen and (max-width: 768px) {
+    .services {
+      padding: 20px 0 0 0; } }
   .services .customContainer {
     display: flex;
     justify-content: space-between;
@@ -116,6 +167,9 @@ services
       border-radius: 10px;
       margin-bottom: 40px;
       text-align: center; }
+      @media only screen and (max-width: 1024px) {
+        .services .customContainer article {
+          flex: 0 0 100%; } }
       .services .customContainer article .text {
         padding: 30px;
         display: flex;
@@ -146,6 +200,9 @@ services
             cursor: pointer;
             transition: 0.4s ease;
             box-shadow: 4px 4px 0px #003866; }
+        @media only screen and (max-width: 768px) {
+          .services .customContainer article .text h3 {
+            font-size: 1.5rem; } }
       .services .customContainer article .icon {
         padding: 20px;
         color: #fff;
@@ -155,6 +212,9 @@ services
         flex-direction: column;
         align-items: center;
         justify-content: center; }
+        @media only screen and (max-width: 768px) {
+          .services .customContainer article .icon {
+            padding: 0; } }
         .services .customContainer article .icon img {
           width: 50%; }
     .services .customContainer article:nth-child(1) .icon img {
@@ -173,14 +233,24 @@ mission
   .mission .customContainer {
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    flex-wrap: wrap; }
     .mission .customContainer article:first-child {
       flex: 10%;
       text-align: center; }
+      @media only screen and (max-width: 768px) {
+        .mission .customContainer article:first-child {
+          flex: 0 0 100%; } }
       .mission .customContainer article:first-child img {
         width: 60%; }
+        @media only screen and (max-width: 768px) {
+          .mission .customContainer article:first-child img {
+            width: 40%; } }
     .mission .customContainer article:last-child {
       flex: 0 0 85%; }
+      @media only screen and (max-width: 768px) {
+        .mission .customContainer article:last-child {
+          flex: 0 0 100%; } }
       .mission .customContainer article:last-child p {
         font-size: 1.2rem;
         text-align: justify;
@@ -193,6 +263,9 @@ technologies
 **********/
 .technologies {
   padding: 80px 0; }
+  @media only screen and (max-width: 768px) {
+    .technologies {
+      padding: 60px 0 0 0; } }
   .technologies .customContainer {
     display: flex;
     flex-wrap: wrap;
@@ -201,6 +274,10 @@ technologies
     .technologies .customContainer article {
       align-self: center;
       flex: 0 0 18%; }
+      @media only screen and (max-width: 768px) {
+        .technologies .customContainer article {
+          flex: 0 0 50%;
+          padding-bottom: 50px; } }
       .technologies .customContainer article img {
         width: 40%; }
     .technologies .customContainer article:first-child img {
@@ -244,6 +321,9 @@ footer {
           font-family: sans-serif;
           margin-bottom: 20px;
           flex: 0 0 49%; }
+          @media only screen and (max-width: 768px) {
+            footer .customContainer article form input {
+              flex: 0 0 100%; } }
         footer .customContainer article form textarea {
           padding: 10px;
           background: transparent;
@@ -270,10 +350,22 @@ footer {
             cursor: pointer;
             transition: 0.4s ease;
             box-shadow: 4px 4px 0px #003866; }
+          @media only screen and (max-width: 768px) {
+            footer .customContainer article form button {
+              margin: 0 auto; } }
           footer .customContainer article form button:hover {
             background: #fff; }
+    @media only screen and (max-width: 768px) {
+      footer .customContainer article:first-child,
+      footer .customContainer article:nth-child(2) {
+        flex: 0 0 100%;
+        text-align: center;
+        margin-bottom: 30px; } }
     footer .customContainer article:last-child {
       flex: 0 0 45%; }
+      @media only screen and (max-width: 768px) {
+        footer .customContainer article:last-child {
+          flex: 0 0 100%; } }
   footer .copy {
     padding-top: 40px;
     color: #fff;
@@ -282,5 +374,51 @@ footer {
     footer .copy img {
       width: 60px;
       margin-left: 10px; }
+
+/**********
+servicesPage
+**********/
+.servicesPage {
+  padding: 80px 0; }
+  .servicesPage .customContainer {
+    display: flex; }
+    .servicesPage .customContainer .allServices {
+      flex: 0 0 80%; }
+      .servicesPage .customContainer .allServices article .serviceFlex {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between; }
+        .servicesPage .customContainer .allServices article .serviceFlex img {
+          width: 100%;
+          flex: 0 0 30%; }
+          @media only screen and (max-width: 768px) {
+            .servicesPage .customContainer .allServices article .serviceFlex img {
+              flex: 0 0 70%;
+              margin: 0 auto;
+              margin-bottom: 30px; } }
+        .servicesPage .customContainer .allServices article .serviceFlex p {
+          flex: 0 0 58%;
+          text-align: justify; }
+          @media only screen and (max-width: 768px) {
+            .servicesPage .customContainer .allServices article .serviceFlex p {
+              flex: 0 0 100%;
+              order: 1; } }
+    .servicesPage .customContainer aside {
+      flex: 0 0 20%; }
+
+.aboutMPP {
+  padding: 80px 0; }
+  .aboutMPP h2 {
+    font-size: 2rem; }
+  .aboutMPP p {
+    font-size: 1.1rem; }
+  .aboutMPP ul {
+    display: flex; }
+    .aboutMPP ul article {
+      flex: 0 0 25%; }
+      .aboutMPP ul article i {
+        color: #76c9b3;
+        margin-right: 10px; }
 
 /*# sourceMappingURL=style.css.map */

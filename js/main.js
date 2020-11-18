@@ -8,3 +8,4 @@ $(window).on('scroll', function() {
         $('.sticky').removeClass('stickyAdd');
     }
 })
+

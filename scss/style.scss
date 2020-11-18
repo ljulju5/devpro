@@ -67,14 +67,23 @@ ul {
 }
 .customContainer {
     width: 80%;
-    margin: 0 auto;    
+    margin: 0 auto;   
+    @media only screen and (max-width:768px) {
+        width: 90%;
+    }
+    @media only screen and (min-width:769px) and (max-width:1366px) {
+        width: 85%;
+    }
 }
 h2 {
     text-align: center;
     font-size: 3rem;
     color: $primaryColor;
     font-weight: 600;
-    text-shadow: 1px 1px 0px #236351;
+    text-shadow: 1px 1px 0px #236351;            
+    @media only screen and (max-width:768px) {
+        font-size: 2.2rem;
+    }
 }
 h2::after {
     display: block;
@@ -83,7 +92,24 @@ h2::after {
     height: 8px;
     background: $primaryColor;
     margin: 10px auto 30px auto;
+    box-shadow: 1px 1px 0px #236351;                
+    @media only screen and (max-width:768px) {
+        height: 5px;
+    }
+}
+.headers {
+    background-image: linear-gradient(rgba( 70, 68, 67,.6), rgba( 70, 68, 67,.6)), url(img/headerServices1.jpg);
+    height: 60vh;
+}
+hr {
+    width: 100%;
+    height: 1px;
+    background: $primaryColor;
+    margin: 60px auto;
     box-shadow: 1px 1px 0px #236351;
+    @media only screen and (max-width:768px) {
+        margin-bottom: 30px;
+    }
 }
 /**********
 nav
@@ -96,12 +122,18 @@ nav {
         .navbar-brand {
             img {
                 width: 100%;
+                @media only screen and (max-width:1024px) {
+                    width: 80%;
+                }
             }         
         }
         h3 {
             font-size: 1.6rem;
             color: $white;
             font-weight: 600;
+            @media only screen and (max-width:1366px) {
+                font-size: 1.2rem;
+            }
             span {
                 color: $primaryColor;
             }
@@ -112,9 +144,14 @@ nav {
             color: $white !important;
             font-size: 1.2rem;
             letter-spacing: 2px;
+            text-shadow: 1px 1px 0px #236351;
+            font-weight: 600;
             &:hover {
             color: $primaryColor !important;
             transition: $transition;
+            }            
+            @media only screen and (max-width:1366px) {
+                font-size: 1rem;
             }
         }
     }
@@ -141,6 +178,8 @@ nav {
         color: $black !important;
         font-size: 1rem !important;
         font-weight: 600;
+        text-shadow: none;
+        padding-left: 10px;
     }    
 }
 
@@ -155,11 +194,20 @@ header {
     display: flex;
     flex-wrap: wrap;
     color: $white;
-    .headerMain {
+    @media only screen and (max-width:768px) {
+        height: 90vh;
+    }
+    .customContainer {
         display: flex;
         align-items: center;   
         h1 {
+            font-size: 3rem;
             font-weight: 600;
+            @media only screen and (max-width:768px) {
+                font-size: 1.6rem;
+                padding-top: 110px;
+                text-shadow: 1px 1px 0px #236351;
+            }
         }
     }
 }
@@ -168,7 +216,10 @@ header {
 services
 **********/
 .services {
-    padding: $padding;
+    padding: $padding;            
+    @media only screen and (max-width:768px) {
+        padding: 20px 0 0 0;
+    }
     .customContainer {
         display: flex;
         justify-content: space-between;
@@ -178,7 +229,10 @@ services
             background:#faf8f8;
             border-radius: 10px;
             margin-bottom: 40px;
-            text-align: center;
+            text-align: center;            
+            @media only screen and (max-width:1024px) {
+                flex: 0 0 100%;
+            }
             .text {
                 padding: 30px;
                 display: flex;
@@ -196,6 +250,11 @@ services
                     left: 33%;
                     bottom: 20px;
                 }
+                h3 {                                
+                    @media only screen and (max-width:768px) {
+                        font-size: 1.5rem;
+                    }
+                }
             }
             .icon {
                 padding: 20px;
@@ -205,7 +264,10 @@ services
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content: center;
+                justify-content: center;            
+                @media only screen and (max-width:768px) {
+                    padding: 0;
+                }
                 img {
                     width: 50%;
                 }
@@ -232,24 +294,32 @@ services
 /**********
 mission
 **********/
-.mission {
-    
-        background: linear-gradient( to top, rgba(118, 201, 179, .9), rgba(225,239,233, .5));
-        padding: 60px 30px;
+.mission {    
+    background: linear-gradient( to top, rgba(118, 201, 179, .9), rgba(225,239,233, .5));
+    padding: 60px 30px;
     .customContainer {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
         article:first-child {
             flex: 10%;
-            text-align: center;
+            text-align: center;                        
+            @media only screen and (max-width:768px) {
+                flex: 0 0 100%;
+            }
             img {
-                width: 60%;
+                width: 60%;            
+                @media only screen and (max-width:768px) {
+                    width: 40%;
+                }
             }
         }
-        article:last-child {
-            
-                flex: 0 0 85%;
+        article:last-child {            
+            flex: 0 0 85%;                        
+            @media only screen and (max-width:768px) {
+                flex: 0 0 100%;
+            }
             p {
                 font-size: 1.2rem;
                 text-align: justify;
@@ -266,6 +336,9 @@ technologies
 **********/
 .technologies {
     padding: $padding;
+    @media only screen and (max-width:768px) {
+        padding: 60px 0 0 0;
+    }
     .customContainer {
         display: flex;
         flex-wrap: wrap;
@@ -274,6 +347,10 @@ technologies
         article {
             align-self: center;
             flex: 0 0 18%;
+            @media only screen and (max-width:768px) {
+                flex: 0 0 50%;
+                padding-bottom: 50px;
+            }
             img {
                 width: 40%;
             }
@@ -325,6 +402,9 @@ footer {
                 input {
                     @include contact;
                     flex: 0 0 49%;
+                    @media only screen and (max-width:768px) {
+                        flex: 0 0 100%;
+                    }
                 }
                 textarea {
                     @include contact;
@@ -332,14 +412,28 @@ footer {
                 }
                 button {
                     @include btn;
+                    @media only screen and (max-width:768px) {
+                        margin: 0 auto;
+                    }
                     &:hover {
                         background: $white;
                     }
                 }
             }
         }
+        article:first-child,
+        article:nth-child(2){
+            @media only screen and (max-width:768px) {
+                flex: 0 0 100%;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+        }
         article:last-child {
             flex: 0 0 45%;
+            @media only screen and (max-width:768px) {
+                flex: 0 0 100%;
+            }
         }
     }
     .copy {
@@ -354,10 +448,67 @@ footer {
     }
 }
 
+/**********
+servicesPage
+**********/
+.servicesPage {
+    padding: $padding;
+    .customContainer {
+        display: flex;
+        .allServices {
+            flex: 0 0 80%;
+        article {
+            .serviceFlex {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                img {
+                    width: 100%;
+                    flex: 0 0 30%;
+                    @media only screen and (max-width:768px) {
+                        flex: 0 0 70%;
+                        margin: 0 auto;
+                        margin-bottom: 30px;
+                    }
+                }
+                p {
+                    flex: 0 0 58%;
+                    text-align: justify;
+                    @media only screen and (max-width:768px) {
+                        flex: 0 0 100%;
+                        order: 1;
+                    }
+                } 
+            }       
+    }
+    }
+        aside {
+            flex: 0 0 20%;
+        }
+    }
+    
+}
 
-
-
-
+.aboutMPP {
+    padding: $padding;
+    h2 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1.1rem;
+    }
+    ul {
+        display: flex;
+        article {
+            flex: 0 0 25%;
+            i {
+                color: $primaryColor;
+                margin-right: 10px;
+            }  
+        }
+    }
+}
 
 
 
