@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700&display=swap");
 /* rgb(118, 201, 179) */
+/* rgb(225, 239, 233) */
 /**********
 mixins
 **********/
@@ -10,6 +11,9 @@ Basic styles
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth; }
 
 body {
   font-size: 16px;
@@ -154,7 +158,7 @@ services
 **********/
 .services {
   padding: 80px 0; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1024px) {
     .services {
       padding: 20px 0 0 0; } }
   .services .customContainer {
@@ -170,6 +174,9 @@ services
       @media only screen and (max-width: 1024px) {
         .services .customContainer article {
           flex: 0 0 100%; } }
+      @media only screen and (min-width: 1025px) and (max-width: 1366px) {
+        .services .customContainer article {
+          flex: 0 0 48%; } }
       .services .customContainer article .text {
         padding: 30px;
         display: flex;
@@ -186,7 +193,6 @@ services
           color: #333333;
           border: 1px solid #003866;
           font-size: 1rem;
-          letter-spacing: 1.2px;
           border-radius: 10px;
           letter-spacing: 1.6px;
           box-shadow: 4px 4px 0px #003866;
@@ -241,6 +247,10 @@ mission
       @media only screen and (max-width: 768px) {
         .mission .customContainer article:first-child {
           flex: 0 0 100%; } }
+      @media only screen and (max-width: 1024px) {
+        .mission .customContainer article:first-child {
+          flex: 0 0 45%;
+          margin: 0 auto; } }
       .mission .customContainer article:first-child img {
         width: 60%; }
         @media only screen and (max-width: 768px) {
@@ -248,7 +258,7 @@ mission
             width: 40%; } }
     .mission .customContainer article:last-child {
       flex: 0 0 85%; }
-      @media only screen and (max-width: 768px) {
+      @media only screen and (max-width: 1024px) {
         .mission .customContainer article:last-child {
           flex: 0 0 100%; } }
       .mission .customContainer article:last-child p {
@@ -339,7 +349,6 @@ footer {
           color: #333333;
           border: 1px solid #003866;
           font-size: 1rem;
-          letter-spacing: 1.2px;
           border-radius: 10px;
           letter-spacing: 1.6px;
           box-shadow: 4px 4px 0px #003866; }
@@ -381,16 +390,20 @@ servicesPage
 .servicesPage {
   padding: 80px 0; }
   .servicesPage .customContainer {
-    display: flex; }
+    display: flex;
+    justify-content: space-between; }
     .servicesPage .customContainer .allServices {
       flex: 0 0 80%; }
+      .servicesPage .customContainer .allServices article h4 {
+        font-size: 1.6rem;
+        font-weight: 600; }
       .servicesPage .customContainer .allServices article .serviceFlex {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between; }
         .servicesPage .customContainer .allServices article .serviceFlex img {
-          width: 100%;
+          width: 40%;
           flex: 0 0 30%; }
           @media only screen and (max-width: 768px) {
             .servicesPage .customContainer .allServices article .serviceFlex img {
@@ -403,9 +416,23 @@ servicesPage
           @media only screen and (max-width: 768px) {
             .servicesPage .customContainer .allServices article .serviceFlex p {
               flex: 0 0 100%;
-              order: 1; } }
+              order: 3; } }
     .servicesPage .customContainer aside {
-      flex: 0 0 20%; }
+      flex: 0 0 16%; }
+      .servicesPage .customContainer aside a {
+        display: block;
+        padding: 8px 20px;
+        margin-bottom: 15px;
+        background: rgba(225, 239, 233, 0.5);
+        color: #333333;
+        font-size: .9rem;
+        border-radius: 10px;
+        box-shadow: 4px 4px 0px #76c9b3; }
+        .servicesPage .customContainer aside a:hover {
+          text-decoration: none;
+          cursor: pointer;
+          transition: 0.4s ease;
+          box-shadow: 4px 4px 0px #74868b; }
 
 .aboutMPP {
   padding: 80px 0; }

@@ -5,6 +5,7 @@ $white: #fff;
 $black: #333333;
 $darkBlue: #003866;
 $lightGray: #ebeaea; 
+$lightBg: #e1efe9; /* rgb(225, 239, 233) */
 $darkGray: #2d3436;
 $padding: 80px 0;
 $font: 16px;
@@ -24,8 +25,7 @@ mixins
     background: $white;
     color: $black;
     border: 1px solid $darkBlue;
-    font-size: 1rem;
-    letter-spacing: 1.2px;    
+    font-size: 1rem;    
     border-radius: 10px;
     letter-spacing: 1.6px;    
     box-shadow: 4px 4px 0px $darkBlue;
@@ -54,6 +54,9 @@ Basic styles
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
 }
 body {
     font-size: $font;
@@ -217,7 +220,7 @@ services
 **********/
 .services {
     padding: $padding;            
-    @media only screen and (max-width:768px) {
+    @media only screen and (max-width:1024px) {
         padding: 20px 0 0 0;
     }
     .customContainer {
@@ -232,6 +235,9 @@ services
             text-align: center;            
             @media only screen and (max-width:1024px) {
                 flex: 0 0 100%;
+            }
+            @media only screen and (min-width:1025px) and (max-width:1366px) {
+                flex: 0 0 48%;
             }
             .text {
                 padding: 30px;
@@ -308,6 +314,10 @@ mission
             @media only screen and (max-width:768px) {
                 flex: 0 0 100%;
             }
+            @media only screen and (max-width:1024px) {
+                flex: 0 0 45%;
+                margin: 0 auto;
+            }
             img {
                 width: 60%;            
                 @media only screen and (max-width:768px) {
@@ -317,7 +327,7 @@ mission
         }
         article:last-child {            
             flex: 0 0 85%;                        
-            @media only screen and (max-width:768px) {
+            @media only screen and (max-width:1024px) {
                 flex: 0 0 100%;
             }
             p {
@@ -455,16 +465,21 @@ servicesPage
     padding: $padding;
     .customContainer {
         display: flex;
+        justify-content: space-between;
         .allServices {
             flex: 0 0 80%;
         article {
+            h4 {
+                font-size: 1.6rem;
+                font-weight: 600;
+            }
             .serviceFlex {
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
                 justify-content: space-between;
                 img {
-                    width: 100%;
+                    width: 40%;
                     flex: 0 0 30%;
                     @media only screen and (max-width:768px) {
                         flex: 0 0 70%;
@@ -477,19 +492,34 @@ servicesPage
                     text-align: justify;
                     @media only screen and (max-width:768px) {
                         flex: 0 0 100%;
-                        order: 1;
+                        order: 3;
                     }
-                } 
+                }
             }       
-    }
+        }
     }
         aside {
-            flex: 0 0 20%;
+            flex: 0 0 16%;
+            a {
+                display: block;
+                padding: 8px 20px;
+                margin-bottom: 15px;
+                background: rgba(225, 239, 233, .5);
+                color: $black;
+                font-size: .9rem;   
+                border-radius: 10px;
+                box-shadow: 4px 4px 0px $primaryColor;
+                &:hover {        
+                    text-decoration: none;
+                    cursor: pointer;
+                    transition: $transition;
+                    box-shadow: 4px 4px 0px #74868b;
+                }
+            }
         }
     }
     
 }
-
 .aboutMPP {
     padding: $padding;
     h2 {
