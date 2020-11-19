@@ -393,7 +393,13 @@ servicesPage
     display: flex;
     justify-content: space-between; }
     .servicesPage .customContainer .allServices {
-      flex: 0 0 80%; }
+      flex: 0 0 73%; }
+      @media only screen and (max-width: 768px) {
+        .servicesPage .customContainer .allServices {
+          flex: 0 0 100%; } }
+      @media only screen and (min-width: 769px) and (max-width: 1366px) {
+        .servicesPage .customContainer .allServices {
+          flex: 0 0 70%; } }
       .servicesPage .customContainer .allServices article h4 {
         font-size: 1.6rem;
         font-weight: 600; }
@@ -417,22 +423,40 @@ servicesPage
             .servicesPage .customContainer .allServices article .serviceFlex p {
               flex: 0 0 100%;
               order: 3; } }
+          @media only screen and (min-width: 769px) and (max-width: 1366px) {
+            .servicesPage .customContainer .allServices article .serviceFlex p {
+              font-size: .9rem; } }
     .servicesPage .customContainer aside {
-      flex: 0 0 16%; }
+      flex: 0 0 23%; }
       .servicesPage .customContainer aside a {
         display: block;
         padding: 8px 20px;
         margin-bottom: 15px;
         background: rgba(225, 239, 233, 0.5);
         color: #333333;
-        font-size: .9rem;
+        font-size: .8rem;
         border-radius: 10px;
         box-shadow: 4px 4px 0px #76c9b3; }
+        @media only screen and (max-width: 1366px) {
+          .servicesPage .customContainer aside a {
+            padding: 5px 10px; } }
         .servicesPage .customContainer aside a:hover {
           text-decoration: none;
           cursor: pointer;
           transition: 0.4s ease;
           box-shadow: 4px 4px 0px #74868b; }
+
+.stickyAside {
+  display: none; }
+
+.stuck {
+  display: block;
+  position: fixed;
+  top: 80px;
+  right: 10%; }
+  @media only screen and (max-width: 768px) {
+    .stuck {
+      display: none; } }
 
 .aboutMPP {
   padding: 80px 0; }
