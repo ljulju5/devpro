@@ -157,6 +157,9 @@ nav {
                 font-size: 1rem;
             }
         }
+        .active {
+            color: $primaryColor !important;
+        }
     }
 }
 .navFixed {
@@ -246,7 +249,7 @@ services
                 justify-content: space-between;
                 align-items: center;
                 flex-wrap: wrap;
-                min-height: 350px;
+                min-height: 300px;
                 p {
                     margin-bottom: 35px;
                 }
@@ -255,6 +258,13 @@ services
                     background: transparent;
                     left: 33%;
                     bottom: 20px;
+                    a {
+                        color: $black;
+                        &:hover {
+                            text-decoration: none;
+                        }
+                        
+                    }
                 }
                 h3 {                                
                     @media only screen and (max-width:768px) {
@@ -478,6 +488,7 @@ servicesPage
             h4 {
                 font-size: 1.6rem;
                 font-weight: 600;
+                margin-bottom: 20px;
             }
             .serviceFlex {
                 display: flex;
@@ -485,17 +496,30 @@ servicesPage
                 align-items: center;
                 justify-content: space-between;
                 img {
-                    width: 40%;
-                    flex: 0 0 30%;
+                    width: 30%;
+                    flex: 0 0 23%;
                     @media only screen and (max-width:768px) {
                         flex: 0 0 70%;
                         margin: 0 auto;
                         margin-bottom: 30px;
                     }
                 }
-                p {
-                    flex: 0 0 58%;
+                .serviceDescription {
+                    flex: 0 0 63%;
                     text-align: justify;
+                    .accordion {
+                        margin-bottom: 20px;
+                    }
+                    p {
+                        a {
+                            font-style: italic;
+                            color: $black;
+                        }
+                    }
+                    button {
+                        color: $black;
+                        font-weight: 600;
+                    }
                     @media only screen and (max-width:768px) {
                         flex: 0 0 100%;
                         order: 3;

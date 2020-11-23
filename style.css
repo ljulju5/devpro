@@ -103,6 +103,8 @@ nav ul a {
   @media only screen and (max-width: 1366px) {
     nav ul a {
       font-size: 1rem; } }
+nav ul .active {
+  color: #76c9b3 !important; }
 
 .navFixed {
   background-color: rgba(255, 255, 255, 0.2); }
@@ -184,7 +186,7 @@ services
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-        min-height: 350px; }
+        min-height: 300px; }
         .services .customContainer article .text p {
           margin-bottom: 35px; }
         .services .customContainer article .text button {
@@ -206,6 +208,10 @@ services
             cursor: pointer;
             transition: 0.4s ease;
             box-shadow: 4px 4px 0px #003866; }
+          .services .customContainer article .text button a {
+            color: #333333; }
+            .services .customContainer article .text button a:hover {
+              text-decoration: none; }
         @media only screen and (max-width: 768px) {
           .services .customContainer article .text h3 {
             font-size: 1.5rem; } }
@@ -402,29 +408,38 @@ servicesPage
           flex: 0 0 70%; } }
       .servicesPage .customContainer .allServices article h4 {
         font-size: 1.6rem;
-        font-weight: 600; }
+        font-weight: 600;
+        margin-bottom: 20px; }
       .servicesPage .customContainer .allServices article .serviceFlex {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between; }
         .servicesPage .customContainer .allServices article .serviceFlex img {
-          width: 40%;
-          flex: 0 0 30%; }
+          width: 30%;
+          flex: 0 0 23%; }
           @media only screen and (max-width: 768px) {
             .servicesPage .customContainer .allServices article .serviceFlex img {
               flex: 0 0 70%;
               margin: 0 auto;
               margin-bottom: 30px; } }
-        .servicesPage .customContainer .allServices article .serviceFlex p {
-          flex: 0 0 58%;
+        .servicesPage .customContainer .allServices article .serviceFlex .serviceDescription {
+          flex: 0 0 63%;
           text-align: justify; }
+          .servicesPage .customContainer .allServices article .serviceFlex .serviceDescription .accordion {
+            margin-bottom: 20px; }
+          .servicesPage .customContainer .allServices article .serviceFlex .serviceDescription p a {
+            font-style: italic;
+            color: #333333; }
+          .servicesPage .customContainer .allServices article .serviceFlex .serviceDescription button {
+            color: #333333;
+            font-weight: 600; }
           @media only screen and (max-width: 768px) {
-            .servicesPage .customContainer .allServices article .serviceFlex p {
+            .servicesPage .customContainer .allServices article .serviceFlex .serviceDescription {
               flex: 0 0 100%;
               order: 3; } }
           @media only screen and (min-width: 769px) and (max-width: 1366px) {
-            .servicesPage .customContainer .allServices article .serviceFlex p {
+            .servicesPage .customContainer .allServices article .serviceFlex .serviceDescription {
               font-size: .9rem; } }
     .servicesPage .customContainer aside {
       flex: 0 0 23%; }
