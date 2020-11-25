@@ -487,4 +487,59 @@ servicesPage
         color: #76c9b3;
         margin-right: 10px; }
 
+/**********
+about us
+**********/
+.intro {
+  padding: 80px 0;
+  text-align: center; }
+  .intro i {
+    color: red;
+    font-size: 1.1rem; }
+  .intro h3 {
+    font-size: 2.5rem;
+    margin-top: 30px; }
+
+.values {
+  background: linear-gradient(rgba(118, 201, 179, 0.9), rgba(200, 239, 233, 0.95)), url("../img/values.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 60px 0; }
+  .values .customContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; }
+  .values article {
+    flex: 0 0 45%; }
+    .values article h3 {
+      font-size: 3rem;
+      font-weight: 600;
+      color: #fff;
+      text-shadow: 1px 1px 0px #236351; }
+  .values .value {
+    flex: 0 0 50%;
+    display: flex;
+    flex-wrap: wrap; }
+    .values .value article {
+      flex: 0 0 45%;
+      margin-bottom: 20px; }
+      .values .value article i {
+        font-size: 1.4rem;
+        padding-bottom: 15px;
+        color: #fff;
+        text-shadow: 1px 1px 0px #236351; }
+      .values .value article h4 {
+        color: #fff;
+        text-shadow: 1px 1px 0px #236351;
+        font-weight: 600; }
+      .values .value article p {
+        font-size: 1.1rem;
+        line-height: 1.8; }
+
+.priceMPP {
+  padding: 80px 0; }
+  .priceMPP h2 {
+    font-size: 2rem; }
+
 /*# sourceMappingURL=style.css.map */

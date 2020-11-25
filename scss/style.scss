@@ -590,11 +590,73 @@ servicesPage
 }
 
 
+/**********
+about us
+**********/
+.intro {
+    padding: $padding;
+    text-align: center;
+    i {
+        color: red;
+        font-size: 1.1rem;
+    }
+    h3 {
+        font-size: 2.5rem;
+        margin-top: 30px;
+    }
+}
+.values {
+    background: linear-gradient(rgba(118, 201, 179, .9), rgba(200,239,233, .95)), url('../img/values.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 60px 0;
+    .customContainer {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    article {
+        flex: 0 0 45%;
+        h3 {
+            font-size: 3rem;
+            font-weight: 600;
+            color: $white;
+            text-shadow: 1px 1px 0px #236351;
+        }
+    }
+    .value {
+        flex: 0 0 50%;
+        display: flex;
+        flex-wrap: wrap;        
+        article {
+            flex: 0 0 45%;
+            margin-bottom: 20px;
+            i {
+                font-size: 1.4rem;
+                padding-bottom: 15px;
+                color: $white;
+                text-shadow: 1px 1px 0px #236351;
+            }
+            h4 {
+                color: $white;
+                text-shadow: 1px 1px 0px #236351;
+                font-weight: 600;
+            }
+            p {
+                font-size: 1.1rem;
+                line-height: 1.8;
+            }
+        }
+    }
+}
 
-
-
-
-
+.priceMPP {
+    padding: $padding;
+    h2 {
+        font-size: 2rem;
+    }
+}
 
 
 
